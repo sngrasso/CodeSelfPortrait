@@ -41,7 +41,7 @@ function draw() {
 
   // body and other accessories
   torso();
-  //glasses();
+  glasses();
 
   // this is for debugging 
   if (gDebugMode == true) {
@@ -207,8 +207,27 @@ function torso() {
   endShape(CLOSE);
 }
 
+function glasses() {
+	stroke(255);
+	noFill();
+
+	// glasses
+	arc(415, 350, 120, 120, -.5, PI + .5);
+	arc(585, 350, 120, 120, -.5, PI + .5);
+	arc(500, 355, 40, 40, PI, 0);
+
+	// bonus: eyebrows
+	noStroke();
+	fill(156, 40, 92);
+	
+	// left & right
+	ellipse(450, 288, 25, 20);
+	ellipse(550, 288, 25, 20);
+}
+
 function drawDebugInfo() {
   fill(255);
+  noStroke();
   text("X: " + mouseX + "   Y: " + mouseY, 40, 40);
   stroke(0);
   strokeWeight(4);
