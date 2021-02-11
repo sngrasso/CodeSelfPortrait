@@ -134,6 +134,8 @@ function eyes() {
 function neck() {
   noStroke();
   fill(227, 107, 161);
+
+  // neck
   beginShape();
   vertex(433, 500);
   vertex(433, 600);
@@ -160,21 +162,24 @@ function nose() {
 function hair() {
   noFill()
   stroke(255);
+
+  // first half of halo
   arc(width / 2, 130, 280, 50, PI, 0, OPEN);
 
+  // switch back to hair color  
   noStroke();
   fill(156, 40, 92);
 	
-  //scalp
+  // scalp
   arc(width / 2, height / 2 - 100, 300, 300, 3, 4.7, OPEN);
   arc(width / 2, height / 2 - 100, 300, 300, 4.7, 6.4, OPEN);
-	
   arc(720, 90, 475, 475, 1.88, 3, OPEN);
   arc(280, 90, 475, 475, .1, 1.27, OPEN);
 
-  //bun
+  // bun
   arc(width/2, 150, 150, 110, 2.5 , 1);
 
+  // second half of halo
   noFill()
   stroke(255);
   arc(width/2, 130, 280, 50, 0, PI, OPEN);	
@@ -208,21 +213,21 @@ function torso() {
 }
 
 function glasses() {
-	stroke(255);
-	noFill();
+  stroke(255);
+  noFill();
 
-	// glasses
-	arc(415, 350, 120, 120, -.5, PI + .5);
-	arc(585, 350, 120, 120, -.5, PI + .5);
-	arc(500, 355, 40, 40, PI, 0);
+  // glasses
+  arc(415, 350, 120, 120, -.5, PI + .5);
+  arc(585, 350, 120, 120, -.5, PI + .5);
+  arc(500, 355, 40, 40, PI, 0);
 
-	// bonus: eyebrows
-	noStroke();
-	fill(156, 40, 92);
+  // bonus: eyebrows
+  noStroke();
+  fill(156, 40, 92);
 	
-	// left & right
-	ellipse(450, 288, 25, 20);
-	ellipse(550, 288, 25, 20);
+  // left & right
+  ellipse(450, 288, 25, 20);
+  ellipse(550, 288, 25, 20);
 }
 
 function drawDebugInfo() {
